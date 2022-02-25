@@ -1,24 +1,22 @@
-﻿  try
-           {
-               
-               int a = int.Parse("-vdv");
-           }
-           catch (ArgumentNullException ex)
-           {
-               Console.WriteLine("boş değer girdiniz");
-               Console.WriteLine(ex);
-           }
-           catch (FormatException ex)
-           {
-               Console.WriteLine("veri tipi uygun defil");
-               Console.WriteLine(ex);
-           }    
-           catch (OverflowException ex)
-           {
-               Console.WriteLine("çok küçük veya .ok büyük deger girdiniz");
-               Console.WriteLine(ex);
-           }
-           finally
-           {
-               Console.WriteLine("işlem başarı ile tamamlandı");
-           }
+﻿int time = DateTime.Now.Hour;
+
+            if (time >= 6 && time <= 11)
+            {
+                Console.WriteLine("Günaydın");
+            }
+            else if (time < 18)
+            {
+                Console.WriteLine("İyi Günler");
+            }
+            else
+            {
+                Console.WriteLine("İyi Geceler");
+            }
+
+
+            string a = time >= 6 && time <= 11 ? "Günaydın!" : time <= 18 ? "İyi günler!" : "İyi geceler!";  
+
+
+
+
+        
