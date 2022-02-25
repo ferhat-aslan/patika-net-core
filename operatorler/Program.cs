@@ -1,28 +1,38 @@
-﻿ string[] bitkiler = new string[9];
-            string[] hayvanlar = { "Kuş", "Böcek", "Aslan", "Ayı", "Fil", "Maymun" };
-            int[] dizi;
-            dizi = new int[4];
-            bitkiler[0] = "Gül";
-            dizi[3] = 11;
+﻿
+            int[] sayiDizisi = {23,12,86,72,3,11,17,4};
+            Console.WriteLine("********Sırasız Dizi ****");
+            foreach (var sayi in sayiDizisi)
+            {
+                Console.WriteLine(sayi);
+            }
+            Console.WriteLine("********Sıralı Dizi ****");
+            Array.Sort(sayiDizisi);
+            foreach (var sayi in sayiDizisi)
+            {
+                Console.WriteLine(sayi);
+            }
+            Console.WriteLine("********Array Clear****");
+            Array.Clear(sayiDizisi,2,2);
+            foreach (var sayi in sayiDizisi)
+            {
+                Console.WriteLine(sayi);
+            }
 
-            Console.WriteLine(hayvanlar[3]);
-            Console.WriteLine(bitkiler[0]);
-            Console.WriteLine(dizi[3]);
-            Console.WriteLine("-----------------------");
-           
-           Console.WriteLine("Eleman sayısı giriniz");
-           int n = int.Parse(Console.ReadLine());
-           int[] sayilar = new int[n];
-           int toplam = 0;
-           
-           for (int i = 0; i < n; i++)
-           {
-               Console.WriteLine("Lütfen {0}. sayıyı giriniz", i+1);
-               sayilar[i] = int.Parse(Console.ReadLine());
-               
-           }
-           foreach (var sayi in sayilar)
-           {
-               toplam+=sayi;
-           }
-            Console.WriteLine(toplam/n);
+            Console.WriteLine("********Array Reverse****");
+            Array.Reverse(sayiDizisi);
+            foreach (var sayi in sayiDizisi)
+            {
+                Console.WriteLine(sayi);
+            }
+
+            Console.WriteLine("********Array Indexof****");
+            
+            Console.WriteLine(Array.IndexOf(sayiDizisi,23));
+
+            Console.WriteLine("********Array Resize****");
+            Array.Resize<int>(ref sayiDizisi,9);
+            sayiDizisi[8] =99;
+            foreach (var sayi in sayiDizisi)
+            {
+                Console.WriteLine(sayi);
+            }
