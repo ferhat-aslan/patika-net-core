@@ -1,48 +1,93 @@
-﻿ string sayi = "9999";
-            bool sonuc = int.TryParse(sayi, out int outSayi);
+﻿int result = 1;
+            for (int i = 1; i < 5; i++)
+            {
+                result *= 3;
+            }
+            Console.WriteLine(result);
 
+            Islemler islem1 = new();
+            Console.WriteLine(islem1.Expo(3, 4));
+            /*
+            */
+            string ifade = "fsdf";
+            bool sonuc = ifade.CheckSpaces();
+            Console.WriteLine(sonuc);
             if (sonuc)
             {
-                Console.WriteLine("Başarılı");
-                Console.WriteLine(outSayi);
-            }
-            else
-            {
-                Console.WriteLine("Başarısız");
+                Console.WriteLine(ifade.RemoveWhiteBackSpaces());
             }
 
-            Metotlar instance = new Metotlar();
-            instance.Topla(4, 5, out int toplamSonuc);
-            Console.WriteLine(toplamSonuc);
+            Console.WriteLine(ifade.MakeUpperCase());
+            Console.WriteLine(ifade.MakeLowerCase());
 
+            int[] dizi = { 9, 3, 6, 2, 5, 0 };
+            dizi.SortArray();
+            dizi.EkranaYazdir();
 
-            //Metot Overloading
-            int ifade = 999;
-            instance.EkranaYazdir(Convert.ToString(ifade));
-            instance.EkranaYazdir(ifade);
-            instance.EkranaYazdir("Berkcan"," Gümüşışık");
-        
+            int sayi = 5;
+            Console.WriteLine(sayi.IsEventNumber());
+            Console.WriteLine(ifade.GetFirstCharacter());
+        }
+    }
 
-
-    
-    class Metotlar
+    public class Islemler
     {
-        public void Topla(int a, int b, out int toplam)
+        public int Expo(int sayi, int us)
         {
-            toplam = a + b;
+            if (us < 2)
+            {
+                return sayi;
+            }
+            return Expo(sayi, us - 1) * sayi;
+        }
+    }
+
+    public static class Extension
+    {
+        public static bool CheckSpaces(this string param)
+        {
+            return param.Contains(" ");
         }
 
-        public void EkranaYazdir(string veri)
+        public static string RemoveWhiteBackSpaces(this string param)
         {
-            Console.WriteLine(veri);
+            string[] dizi = param.Split(" ");
+            return string.Join("-", dizi);
         }
 
-        public void EkranaYazdir(int veri)
+        public static string MakeUpperCase(this string param)
         {
-            Console.WriteLine(veri);
+            return param.ToUpper();
         }
 
-        public void EkranaYazdir(string veri1, string veri2)
+        public static string MakeLowerCase(this string param)
         {
-            Console.WriteLine(veri1+veri2);
-        }}
+            return param.ToLower();
+        }
+
+        public static int[] SortArray(this int[] param)
+        {
+            Array.Sort(param);
+            return param;
+        }
+
+        public static void EkranaYazdir(this int[] param)
+        {
+            foreach (var item in param)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public static bool IsEventNumber(this int value)
+        {
+            if (value % 2 == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public static string GetFirstCharacter(this string param)
+        {
+            return param.Substring(0,1);
+        }
