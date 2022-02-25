@@ -1,34 +1,48 @@
-﻿int a = 3;
-            int b = 2;
-            int sonuc = Topla(a,b);
-            Console.WriteLine(sonuc);
+﻿ string sayi = "9999";
+            bool sonuc = int.TryParse(sayi, out int outSayi);
 
-            Metotlar ornek = new Metotlar();
-            ornek.EkranaYazdir(Convert.ToString(sonuc));
-            
-            int sonuc2 = ornek.ArttirVeTopla(a,b);
-            ornek.EkranaYazdir(Convert.ToString(sonuc2));
-            ornek.EkranaYazdir(Convert.ToString(a+b));
-
-
-        }
-        static int Topla(int deger1,int deger2)
+            if (sonuc)
             {
-                return deger1 + deger2;
+                Console.WriteLine("Başarılı");
+                Console.WriteLine(outSayi);
             }
-    }
+            else
+            {
+                Console.WriteLine("Başarısız");
+            }
 
+            Metotlar instance = new Metotlar();
+            instance.Topla(4, 5, out int toplamSonuc);
+            Console.WriteLine(toplamSonuc);
+
+
+            //Metot Overloading
+            int ifade = 999;
+            instance.EkranaYazdir(Convert.ToString(ifade));
+            instance.EkranaYazdir(ifade);
+            instance.EkranaYazdir("Berkcan"," Gümüşışık");
+        
+
+
+    
     class Metotlar
     {
+        public void Topla(int a, int b, out int toplam)
+        {
+            toplam = a + b;
+        }
+
         public void EkranaYazdir(string veri)
         {
             Console.WriteLine(veri);
         }
 
-        public int ArttirVeTopla(int deger1 , int deger2)
+        public void EkranaYazdir(int veri)
         {
-            deger1 += 1;
-            deger2 += 1;
-            return deger1 + deger2;
+            Console.WriteLine(veri);
         }
-    }
+
+        public void EkranaYazdir(string veri1, string veri2)
+        {
+            Console.WriteLine(veri1+veri2);
+        }}
