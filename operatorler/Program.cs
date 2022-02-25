@@ -1,25 +1,28 @@
-﻿ Console.WriteLine("Sayı giriniz :");
-            int a = int.Parse(Console.ReadLine());
-            int b = 1;
-            int c = 0;
-            while (b <= a)
-            {
-                c += b;
-                b++;
-            }
-            Console.WriteLine(c / a);
-            Console.WriteLine("--------------------------");
-            char e = 'a';
-            while (e < 'z')
-            {
-                Console.WriteLine(e);
-                e++;
+﻿ string[] bitkiler = new string[9];
+            string[] hayvanlar = { "Kuş", "Böcek", "Aslan", "Ayı", "Fil", "Maymun" };
+            int[] dizi;
+            dizi = new int[4];
+            bitkiler[0] = "Gül";
+            dizi[3] = 11;
 
-            }
-            Console.WriteLine("--------------------------");
-            string[] ogrenciler = { "Ali", "Ahmet", "Ayşe", "Aylin" };
-
-            foreach (var i in ogrenciler)
-            {
-               Console.WriteLine(i);
-            }
+            Console.WriteLine(hayvanlar[3]);
+            Console.WriteLine(bitkiler[0]);
+            Console.WriteLine(dizi[3]);
+            Console.WriteLine("-----------------------");
+           
+           Console.WriteLine("Eleman sayısı giriniz");
+           int n = int.Parse(Console.ReadLine());
+           int[] sayilar = new int[n];
+           int toplam = 0;
+           
+           for (int i = 0; i < n; i++)
+           {
+               Console.WriteLine("Lütfen {0}. sayıyı giriniz", i+1);
+               sayilar[i] = int.Parse(Console.ReadLine());
+               
+           }
+           foreach (var sayi in sayilar)
+           {
+               toplam+=sayi;
+           }
+            Console.WriteLine(toplam/n);
