@@ -1,43 +1,49 @@
-﻿int ay = DateTime.Now.Month;
-            switch (ay)
-            {
-                case 1:
-                    Console.WriteLine("Ocak ayı");
-                    break;
-                case 2:
-                    Console.WriteLine("Şubat ayı");
-                    break;
-                case 3:
-                    Console.WriteLine("Mart ayı");
-                    break;
-                case 4:
-                    Console.WriteLine("Nisan ayı");
-                    break;
-                case 5:
-                    Console.WriteLine("Mayıs ayı");
-                    break;
-                default:
-                    Console.WriteLine("Yanlış veri");
-                    break;
-            }
+﻿   Console.WriteLine("Lüften sayı giriniz ");
+            int a = Convert.ToInt32(Console.ReadLine());
 
-            switch (ay)
+            for (int i = 1; i <= a; i++)
             {
-                case 1:
-                case 2:
-                case 12:
-                    Console.WriteLine("Kış Mevsimi");
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    Console.WriteLine("İlkbahar Mevsimi");
-                    break;
-                default:
-                    Console.WriteLine("Mevsim Belirsiz");
-                    break;
+                if (i % 2 == 1)
+                {
+                    Console.WriteLine(i);
+
+                }
+
 
             }
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Yeni Örnek");
 
+            int tek = 0;
+            int çift = 0;
+            for (int i = 0; i <= 1000; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    tek += i;
+                }
 
-        
+                else
+                {
+                    çift += i;
+                }
+
+            }
+            Console.WriteLine("Tek sayılar toplamı :" + tek);
+            Console.WriteLine("Çift sayılar toplamı :" + çift);
+
+            Console.WriteLine("Yeni Örnek");
+
+            for (int i = 1; i < 10; i++)
+            {
+                if (i == 5)
+                    break;
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("Yeni Örnek");
+            for (int i = 1; i < 10; i++)
+            {
+                if (i == 5)
+                    continue;
+                Console.WriteLine(i);
+            }
