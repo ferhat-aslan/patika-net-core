@@ -1,38 +1,34 @@
-﻿
-            int[] sayiDizisi = {23,12,86,72,3,11,17,4};
-            Console.WriteLine("********Sırasız Dizi ****");
-            foreach (var sayi in sayiDizisi)
-            {
-                Console.WriteLine(sayi);
-            }
-            Console.WriteLine("********Sıralı Dizi ****");
-            Array.Sort(sayiDizisi);
-            foreach (var sayi in sayiDizisi)
-            {
-                Console.WriteLine(sayi);
-            }
-            Console.WriteLine("********Array Clear****");
-            Array.Clear(sayiDizisi,2,2);
-            foreach (var sayi in sayiDizisi)
-            {
-                Console.WriteLine(sayi);
-            }
+﻿int a = 3;
+            int b = 2;
+            int sonuc = Topla(a,b);
+            Console.WriteLine(sonuc);
 
-            Console.WriteLine("********Array Reverse****");
-            Array.Reverse(sayiDizisi);
-            foreach (var sayi in sayiDizisi)
-            {
-                Console.WriteLine(sayi);
-            }
-
-            Console.WriteLine("********Array Indexof****");
+            Metotlar ornek = new Metotlar();
+            ornek.EkranaYazdir(Convert.ToString(sonuc));
             
-            Console.WriteLine(Array.IndexOf(sayiDizisi,23));
+            int sonuc2 = ornek.ArttirVeTopla(a,b);
+            ornek.EkranaYazdir(Convert.ToString(sonuc2));
+            ornek.EkranaYazdir(Convert.ToString(a+b));
 
-            Console.WriteLine("********Array Resize****");
-            Array.Resize<int>(ref sayiDizisi,9);
-            sayiDizisi[8] =99;
-            foreach (var sayi in sayiDizisi)
+
+        }
+        static int Topla(int deger1,int deger2)
             {
-                Console.WriteLine(sayi);
+                return deger1 + deger2;
             }
+    }
+
+    class Metotlar
+    {
+        public void EkranaYazdir(string veri)
+        {
+            Console.WriteLine(veri);
+        }
+
+        public int ArttirVeTopla(int deger1 , int deger2)
+        {
+            deger1 += 1;
+            deger2 += 1;
+            return deger1 + deger2;
+        }
+    }

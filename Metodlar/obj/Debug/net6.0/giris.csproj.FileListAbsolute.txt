@@ -1,0 +1,15 @@
+C:\Users\son\Documents\dotnet\giris\bin\Debug\net6.0\giris.exe
+C:\Users\son\Documents\dotnet\giris\bin\Debug\net6.0\giris.deps.json
+C:\Users\son\Documents\dotnet\giris\bin\Debug\net6.0\giris.runtimeconfig.json
+C:\Users\son\Documents\dotnet\giris\bin\Debug\net6.0\giris.dll
+C:\Users\son\Documents\dotnet\giris\bin\Debug\net6.0\giris.pdb
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.csproj.AssemblyReference.cache
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.AssemblyInfoInputs.cache
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.AssemblyInfo.cs
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.csproj.CoreCompileInputs.cache
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.dll
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\refint\giris.dll
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.pdb
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\giris.genruntimeconfig.cache
+C:\Users\son\Documents\dotnet\giris\obj\Debug\net6.0\ref\giris.dll
