@@ -21,35 +21,33 @@ Console.WriteLine("Hello, World!");
             decimal de = 5;         //16 byte
 
             char ch = '2';          //2 byte
-            string str = "Fatih";   //sınırsız
+            string str = "string ifade";   
 
             bool b1 = true;
             bool b2 = false;
 
             DateTime dt = DateTime.Now;
 
-            object o1 = "x";
-            object o2 = 'y';
+            object o1 = "a";
+            object o2 = 'c';
             object o3 = 4;
             object o4 = 4.3;
 
-            // string ifadeler
+            
             string str1 = string.Empty;
-            str1 = "Fatih Hacıoğlu";
-            string ad = "Fatih";
-            string soyad = "Hacıoğlu";
-            string tamIsim = ad + " " + soyad;
+            str1 = "csdcs";
+            string ad = "sdcs";
+            string soyad = "erg";
+            string full = ad + " " + soyad;
 
-            //integer tanımlama şekilleri
+            
             int integer1 = 5;
             int integer2 = 3;
             int integer3 = integer1 * integer2;
 
-            //boolean ifadeler
             bool bool1 = 10 < 2;
 
-            //Değişken dönüşümleri
-            string str20 = "20";
+            string str20 = "230";
             int int20 = 20;
             string yeniDeger = str20 + int20.ToString();
             Console.WriteLine(yeniDeger);
@@ -59,7 +57,7 @@ Console.WriteLine("Hello, World!");
 
             int int22 = int20 + int.Parse(str20);
 
-            //Datetime
+            //
             string datetime = DateTime.Now.ToString("dd.MM.yyyy");
             Console.WriteLine(datetime);
 
